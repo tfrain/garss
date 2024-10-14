@@ -98,7 +98,7 @@ def send_mail(email, title, contents):
     msg = MIMEMultipart()
     msg['From'] = user
     msg['To'] = email
-    msg['Subject'] = '主题: 学习使我快乐'
+    msg['Subject'] = title
 
     # 邮件正文
     body = contents
@@ -386,9 +386,9 @@ def main():
     reResult = re.findall(mail_re, readme_md[0])
 
     try:
-        send_mail(email_list, "嘎!RSS订阅", reResult)
+        send_mail(email_list[0], "嘎!RSS订阅", reResult)
     except Exception as e:
-        print("==邮件设信息置错误===》》", e)
+        print("==邮件设置信息错误===》》", e)
 
 
 if __name__ == "__main__":
