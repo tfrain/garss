@@ -1,18 +1,17 @@
-import feedparser
-import time
+import json
 import os
 import re
-import pytz
-from datetime import datetime
-import requests
-import markdown
-import json
 import shutil
+import time
+from datetime import datetime
+from multiprocessing import Manager, Pool
 from urllib.parse import urlparse
-from multiprocessing import Pool, Manager
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+
+import feedparser
+import markdown
+import pytz
+import requests
+import yagmail
 
 
 def get_rss_info(feed_url, index, rss_info_list):
@@ -94,27 +93,14 @@ def send_mail(email, title, contents):
         else:
             print("无法获取发件人信息")
 
-    # 连接邮箱服务器
-    msg = MIMEMultipart()
-    msg['From'] = user
-    msg['To'] = email
-    msg['Subject'] = title
-
-    # 邮件正文
-    body = contents
-    msg.attach(MIMEText(body, 'html'))  # 设置邮件格式为HTML
-
     try:
         # 连接Gmail SMTP服务器，使用TLS
-        server = smtplib.SMTP(host, 587)  # 这里是Gmail的SMTP服务器
-        server.starttls()  # 启用TLS加密
-        server.login(user, password)  # 登录邮箱
-        server.sendmail(user, email, msg.as_string())  # 发送邮件
+        yag = yagmail.SMTP(user, password, host)
+        # 发送邮件
+        yag.send(email, title, contents)
         print("邮件发送成功！")
     except Exception as e:
         print(f"邮件发送失败: {str(e)}")
-    finally:
-        server.quit()  # 关闭连接
 
 
 def replace_readme():
@@ -381,6 +367,7 @@ def main():
     cp_readme_md_to_docs()
     cp_media_to_docs()
     email_list = get_email_list()
+    print("==邮件列表===", email_list[0])
 
     mail_re = r'邮件内容区开始>([.\S\s]*)<邮件内容区结束'
     reResult = re.findall(mail_re, readme_md[0])
