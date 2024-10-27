@@ -374,10 +374,6 @@
             xmlUrl="https://www.wpdaxue.com/feed" htmlUrl="https://www.wpdaxue.com/feed"/>
       <outline text="Linux中国" title="Linux中国" type="rss"  
             xmlUrl="https://linux.cn/rss.xml" htmlUrl="https://linux.cn/rss.xml"/>
-      <outline text="V2EX" title="V2EX" type="rss"  
-            xmlUrl="https://www.v2ex.com/index.xml" htmlUrl="https://www.v2ex.com/index.xml"/>
-      <outline text="酷壳(左耳朵耗子)" title="酷壳(左耳朵耗子)" type="rss"  
-            xmlUrl="https://coolshell.cn/feed" htmlUrl="https://coolshell.cn/feed"/>
       <outline text="豆瓣" title="豆瓣" type="rss"  
             xmlUrl="https://www.douban.com/feed/review/movie" htmlUrl="https://www.douban.com/feed/review/movie"/>
       <outline text="豆瓣" title="豆瓣" type="rss"  

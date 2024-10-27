@@ -198,8 +198,6 @@
 <outline  text="蠎周刊" description="Python各种Weekly中译版。" htmlUrl="https://weekly.pychina.org/feeds/all.atom.xml" language="unknown" title="蠎周刊" type="rss" version="RSS2" xmlUrl="https://weekly.pychina.org/feeds/all.atom.xml"/>
 <outline  text="WordPress大学" description="WordPress建站资源平台" htmlUrl="https://www.wpdaxue.com/feed" language="unknown" title="WordPress大学" type="rss" version="RSS2" xmlUrl="https://www.wpdaxue.com/feed"/>
 <outline  text="Linux中国" description="Linux中文开源社区" htmlUrl="https://linux.cn/rss.xml" language="unknown" title="Linux中国" type="rss" version="RSS2" xmlUrl="https://linux.cn/rss.xml"/>
-<outline  text="V2EX" description="创意工作者的社区" htmlUrl="https://www.v2ex.com/index.xml" language="unknown" title="V2EX" type="rss" version="RSS2" xmlUrl="https://www.v2ex.com/index.xml"/>
-<outline  text="酷壳(左耳朵耗子)" description="酷 壳RSS" htmlUrl="https://coolshell.cn/feed" language="unknown" title="酷壳(左耳朵耗子)" type="rss" version="RSS2" xmlUrl="https://coolshell.cn/feed"/>
 <outline  text="豆瓣" description="豆瓣最受欢迎的影评" htmlUrl="https://www.douban.com/feed/review/movie" language="unknown" title="豆瓣" type="rss" version="RSS2" xmlUrl="https://www.douban.com/feed/review/movie"/>
 <outline  text="豆瓣" description="豆瓣最受欢迎的书评" htmlUrl="https://www.douban.com/feed/review/book" language="unknown" title="豆瓣" type="rss" version="RSS2" xmlUrl="https://www.douban.com/feed/review/book"/>
 <outline  text="豆瓣" description="豆瓣最受欢迎的乐评" htmlUrl="https://www.douban.com/feed/review/music" language="unknown" title="豆瓣" type="rss" version="RSS2" xmlUrl="https://www.douban.com/feed/review/music"/>
