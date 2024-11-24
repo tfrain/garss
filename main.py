@@ -19,22 +19,23 @@ def get_rss_info(feed_url, index, rss_info_list):
     request_success = False
     # 如果请求出错,则重新请求,最多五次
     for i in range(3):
-        if (request_success == False):
+        if (request_success is False):
             try:
                 headers = {
                     # 设置用户代理头(为狼披上羊皮)
-                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko)" + \
+                    " Chrome/63.0.3239.132 Safari/537.36",
                     "Content-Encoding": "gzip"
                 }
                 # 三次分别设置8, 16, 24秒钟超时
                 feed_url_content = requests.get(
-                    feed_url,  timeout=(i+1)*8, headers=headers).content
+                    feed_url, timeout=(i + 1) * 8, headers=headers).content
                 feed = feedparser.parse(feed_url_content)
                 feed_entries = feed["entries"]
                 feed_entries_length = len(feed_entries)
                 print("==feed_url=>>", feed_url,
                       "==len=>>", feed_entries_length)
-                for entrie in feed_entries[0: feed_entries_length-1]:
+                for entrie in feed_entries[0: feed_entries_length - 1]:
                     title = entrie["title"]
                     link = entrie["link"]
                     date = time.strftime(
@@ -50,7 +51,7 @@ def get_rss_info(feed_url, index, rss_info_list):
                     })
                 request_success = True
             except Exception as e:
-                print(feed_url+"第+"+str(i)+"+次请求出错==>>", e)
+                print(feed_url + "第+" + str(i) + "+次请求出错==>>", e)
                 pass
         else:
             pass
@@ -65,7 +66,7 @@ def get_rss_info(feed_url, index, rss_info_list):
             remaining_amount = remaining_amount + 1
 
     print("当前进度 | 剩余数量", remaining_amount, "已完成==>>",
-          len(rss_info_list)-remaining_amount)
+          len(rss_info_list) - remaining_amount)
     return result["result"]
 
 
@@ -81,8 +82,8 @@ def send_mail(email, title, contents):
             password = os.environ["PASSWORD"]
         if (os.environ["HOST"]):
             host = os.environ["HOST"]
-    except:
-        print("无法获取github的secrets配置信息,开始使用本地变量")
+    except Exception as e:
+        print("无法获取github的secrets配置信息,开始使用本地变量", e)
         if (os.path.exists(os.path.join(os.getcwd(), "secret.json"))):
             with open(os.path.join(os.getcwd(), "secret.json"), 'r') as load_f:
                 load_dict = json.load(load_f)
@@ -153,7 +154,7 @@ def replace_readme():
             latest_content = ""
             parse_result = urlparse(link)
             scheme_netloc_url = str(parse_result.scheme) + \
-                "://"+str(parse_result.netloc)
+                "://" + str(parse_result.netloc)
             latest_content = "[暂无法通过爬虫获取信息, 点击进入源网站主页](" + \
                 scheme_netloc_url + ")"
 
@@ -163,28 +164,32 @@ def replace_readme():
                     if (rss_info_atom["date"] == datetime.today().strftime("%Y-%m-%d")):
                         new_num = new_num + 1
                         if (new_num % 2) == 0:
-                            current_date_news_index[0] = current_date_news_index[0] + "<div style='line-height:3;' ><a href='" + rss_info_atom["link"] + "' " + \
+                            current_date_news_index[0] = current_date_news_index[0] + \
+                                "<div style='line-height:3;' ><a href='" + \
+                                rss_info_atom["link"] + "' " + \
                                 'style="line-height:2;text-decoration:none;display:block;color:#584D49;">' + \
                                 "🌈 ‣ " + \
                                 rss_info_atom["title"] + " | 第" + \
                                 str(new_num) + "篇" + "</a></div>"
                         else:
-                            current_date_news_index[0] = current_date_news_index[0] + "<div style='line-height:3;background-color:#FAF6EA;' ><a href='" + rss_info_atom["link"] + "' " + \
-                                'style="line-height:2;text-decoration:none;display:block;color:#584D49;">' + \
+                            current_date_news_index[0] = current_date_news_index[0] + \
+                                "<div style='line-height:3;background-color:#FAF6EA;' ><a href='" + rss_info_atom["link"] + \
+                                "' " + 'style="line-height:2;text-decoration:none;display:block;color:#584D49;">' + \
                                 "🌈 ‣ " + \
                                 rss_info_atom["title"] + " | 第" + \
                                 str(new_num) + "篇" + "</a></div>"
 
-            except:
-                print("An exception occurred")
+            except Exception as e:
+                print("An exception occurred:", e)
 
             if (len(rss_info) > 0):
                 rss_info[0]["title"] = rss_info[0]["title"].replace("|", "\|")
                 rss_info[0]["title"] = rss_info[0]["title"].replace("[", "\[")
                 rss_info[0]["title"] = rss_info[0]["title"].replace("]", "\]")
 
-                latest_content = "[" + "‣ " + rss_info[0]["title"] + (" 🌈 " + rss_info[0]["date"] if (rss_info[0]["date"] == datetime.today(
-                ).strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + "](" + rss_info[0]["link"] + ")"
+                latest_content = "[" + "‣ " + rss_info[0]["title"] + (" 🌈 " + rss_info[0]["date"] if (
+                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + \
+                    "](" + rss_info[0]["link"] + ")"
 
             if (len(rss_info) > 1):
                 rss_info[1]["title"] = rss_info[1]["title"].replace("|", "\|")
@@ -192,7 +197,8 @@ def replace_readme():
                 rss_info[1]["title"] = rss_info[1]["title"].replace("]", "\]")
 
                 latest_content = latest_content + "<br/>[" + "‣ " + rss_info[1]["title"] + (" 🌈 " + rss_info[0]["date"] if (
-                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + "](" + rss_info[1]["link"] + ")"
+                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + \
+                    "](" + rss_info[1]["link"] + ")"
 
             # 生成after_info
             after_info = before_info.replace(
@@ -253,7 +259,10 @@ def create_opml():
     result = ""
     result_v1 = ""
 
-    # <outline text="CNET News.com" description="Tech news and business reports by CNET News.com. Focused on information technology, core topics include computers, hardware, software, networking, and Internet media." htmlUrl="http://news.com.com/" language="unknown" title="CNET News.com" type="rss" version="RSS2" xmlUrl="http://news.com.com/2547-1_3-0-5.xml"/>
+    # <outline text="CNET News.com" description="Tech news and business reports by CNET News.com. 
+    # Focused on information technology, core topics include computers, hardware, software, networking, 
+    # and Internet media." htmlUrl="http://news.com.com/" language="unknown" title="CNET News.com" type="rss" 
+    # version="RSS2" xmlUrl="http://news.com.com/2547-1_3-0-5.xml"/>
 
     with open(os.path.join(os.getcwd(), "EditREADME.md"), 'r') as load_f:
         edit_readme_md = load_f.read()
@@ -289,9 +298,11 @@ def create_opml():
 
             # print('opml_info==>>', opml_info);
 
-            opml_info_text = '<outline  text="{text}" description="{description}" htmlUrl="{htmlUrl}" language="unknown" title="{title}" type="rss" version="RSS2" xmlUrl="{xmlUrl}"/>'
+            opml_info_text = '<outline  text="{text}" description="{description}" htmlUrl="{htmlUrl}" ' + \
+                'language="unknown" title="{title}" type="rss" version="RSS2" xmlUrl="{xmlUrl}"/>'
 
-            opml_info_text_v1 = '      <outline text="{title}" title="{title}" type="rss"  \n            xmlUrl="{xmlUrl}" htmlUrl="{htmlUrl}"/>'
+            opml_info_text_v1 = '      <outline text="{title}" title="{title}" type="rss"  \n    ' + \
+                '        xmlUrl="{xmlUrl}" htmlUrl="{htmlUrl}"/>'
 
             opml_info_text = opml_info_text.format(
                 text=opml_info["text"],
@@ -359,10 +370,14 @@ def create_json():
 
 
 def main():
+    # 提取订阅信息，放入garssInfo.json 中
     create_json()
+    # 提取订阅信息，放入opml文件v1、v2中
     create_opml()
+    # 根据EditREADME.md生成README.md
     readme_md = replace_readme()
-    content = markdown.markdown(readme_md[0], extensions=[
+    # 使用 markdown 库将 README.md 文件的内容转换为 HTML 格式
+    markdown.markdown(readme_md[0], extensions=[
                                 'tables', 'fenced_code'])
     cp_readme_md_to_docs()
     cp_media_to_docs()
