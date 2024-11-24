@@ -420,10 +420,10 @@ def main():
 
     mail_re = r'邮件内容区开始>([.\S\s]*)<邮件内容区结束'
     reResult = re.findall(mail_re, readme_md[0])
-    result = list(delivery_result) + reResult
+    result = [str(delivery_result)] + reResult
 
     try:
-        send_mail(email_list[0], "嘎!RSS订阅", result)
+        send_mail(email_list[0], "《提醒事项及新闻RSS》", result)
     except Exception as e:
         print("==邮件设置信息错误===》》", e)
 
