@@ -388,15 +388,15 @@ def get_random_delivery_result():
     end_data = start_of_period + timedelta(days=13)
     result = "<h2>"
     if delivery_date.strftime('%Y-%m-%d') == today.strftime('%Y-%m-%d'):
-        result += f"Random delivery date within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
-to {end_data.strftime('%Y-%m-%d')}): {delivery_date.strftime('%Y-%m-%d')}"
+        result += f"Should you give a gift within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
+to {end_data.strftime('%Y-%m-%d')})?: YES! Day: {delivery_date.strftime('%Y-%m-%d')}"
         # 选择送的东西（花或水果）
         items = ["flowers", "fruits"]
         item_to_send = random.choice(items)
-        result += f"Item to send: {item_to_send.capitalize()}"
+        result += f", Item to send: {item_to_send.capitalize()}"
     else:
-        result += f"Random delivery date within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
-to {end_data.strftime('%Y-%m-%d')}): {delivery_date.strftime('%Y-%m-%d')}, not today {today.strftime('%Y-%m-%d')}"
+        result += f"Should you give a gift within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
+to {end_data.strftime('%Y-%m-%d')})?: {delivery_date.strftime('%Y-%m-%d')}, not today: {today.strftime('%Y-%m-%d')}"
     result += "</h2>"
     return result
 

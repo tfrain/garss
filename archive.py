@@ -10,6 +10,7 @@ DOMAIN = "https://programmerscareer.com/"
 RSS_URL = "https://wesley-wei.medium.com/feed"
 # 存储文章的文件路径
 STORED_ARTICLES_FILE = "../blog/draft/articles.json"
+STORED_ARTICLES_FILE_CN = "../blog/draft/articles_cn.json"
 # 轮询间隔时间（秒）
 # POLL_INTERVAL = 24 * 60 * 60  # 一天
 
@@ -21,10 +22,26 @@ def load_stored_articles():
     except FileNotFoundError:
         return []
 
+
+def load_stored_articles_cn():
+    """加载已存储的文章信息"""
+    try:
+        with open(STORED_ARTICLES_FILE_CN, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+
 def save_articles(articles):
     """将文章信息保存到本地文件"""
     with open(STORED_ARTICLES_FILE, "w", encoding="utf-8") as file:
         json.dump(articles, file, ensure_ascii=False, indent=4)
+
+
+def save_articles_cn(articles):
+    """将文章信息保存到本地文件"""
+    with open(STORED_ARTICLES_FILE_CN, "w", encoding="utf-8") as file:
+        json.dump(articles, file, ensure_ascii=False, indent=4)
+
 
 def fetch_rss_feed(url):
     """从 RSS URL 获取文章信息"""
@@ -47,6 +64,14 @@ def find_new_articles(stored_articles, fetched_articles, web_articles):
                 article["web_link"] = web_article["link"]
     new_articles = [article for article in fetched_articles if article["title"] not in stored_titles]
     return new_articles
+
+
+def find_new_articles_cn(stored_articles, fetched_articles):
+    """对比已存储的文章和新获取的文章，返回新增的文章"""
+    stored_titles = {article["title"] for article in stored_articles}
+    new_articles = [article for article in fetched_articles if article["title"] not in stored_titles]
+    return new_articles
+
 
 def fetch_titles_and_links(url):
     """
@@ -101,6 +126,19 @@ def main():
             print(f"New Article: {article['title']} - {article['link']}")
     else:
         print("No new articles found.")
+
+    print(f"Fetching Chinese Website at {datetime.now()}...")
+    stored_articles_cn = load_stored_articles_cn()
+    fetched_articles_cn = fetch_titles_and_links("https://programmerscareer.com/zh-cn/archives/")
+    new_articles_cn = find_new_articles_cn(stored_articles_cn, fetched_articles_cn)
+    if new_articles_cn:
+        print(f"Found {len(new_articles_cn)} new articles!")
+        stored_articles_cn.extend(new_articles_cn)
+        save_articles_cn(stored_articles_cn)
+        for article in new_articles_cn:
+            print(f"New Chinese Article: {article['title']} - {article['link']}")
+    else:
+        print("No new Chinese articles found.")
 
 
 if __name__ == "__main__":
