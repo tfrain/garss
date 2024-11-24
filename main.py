@@ -1,9 +1,10 @@
 import json
 import os
+import random
 import re
 import shutil
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from multiprocessing import Manager, Pool
 from urllib.parse import urlparse
 
@@ -12,6 +13,9 @@ import markdown
 import pytz
 import requests
 import yagmail
+
+# 礼物间隔天数
+INTERVAL = 14
 
 
 def get_rss_info(feed_url, index, rss_info_list):
@@ -183,21 +187,21 @@ def replace_readme():
                 print("An exception occurred:", e)
 
             if (len(rss_info) > 0):
-                rss_info[0]["title"] = rss_info[0]["title"].replace("|", "\|")
-                rss_info[0]["title"] = rss_info[0]["title"].replace("[", "\[")
-                rss_info[0]["title"] = rss_info[0]["title"].replace("]", "\]")
+                rss_info[0]["title"] = rss_info[0]["title"].replace("|", "|")
+                rss_info[0]["title"] = rss_info[0]["title"].replace("[", "[")
+                rss_info[0]["title"] = rss_info[0]["title"].replace("]", "]")
 
                 latest_content = "[" + "‣ " + rss_info[0]["title"] + (" 🌈 " + rss_info[0]["date"] if (
-                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + \
+                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " | " + rss_info[0]["date"]) + \
                     "](" + rss_info[0]["link"] + ")"
 
             if (len(rss_info) > 1):
-                rss_info[1]["title"] = rss_info[1]["title"].replace("|", "\|")
-                rss_info[1]["title"] = rss_info[1]["title"].replace("[", "\[")
-                rss_info[1]["title"] = rss_info[1]["title"].replace("]", "\]")
+                rss_info[1]["title"] = rss_info[1]["title"].replace("|", "|")
+                rss_info[1]["title"] = rss_info[1]["title"].replace("[", "[")
+                rss_info[1]["title"] = rss_info[1]["title"].replace("]", "]")
 
                 latest_content = latest_content + "<br/>[" + "‣ " + rss_info[1]["title"] + (" 🌈 " + rss_info[0]["date"] if (
-                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " \| " + rss_info[0]["date"]) + \
+                    rss_info[0]["date"] == datetime.today().strftime("%Y-%m-%d")) else " | " + rss_info[0]["date"]) + \
                     "](" + rss_info[1]["link"] + ")"
 
             # 生成after_info
@@ -259,9 +263,9 @@ def create_opml():
     result = ""
     result_v1 = ""
 
-    # <outline text="CNET News.com" description="Tech news and business reports by CNET News.com. 
-    # Focused on information technology, core topics include computers, hardware, software, networking, 
-    # and Internet media." htmlUrl="http://news.com.com/" language="unknown" title="CNET News.com" type="rss" 
+    # <outline text="CNET News.com" description="Tech news and business reports by CNET News.com.
+    # Focused on information technology, core topics include computers, hardware, software, networking,
+    # and Internet media." htmlUrl="http://news.com.com/" language="unknown" title="CNET News.com" type="rss"
     # version="RSS2" xmlUrl="http://news.com.com/2547-1_3-0-5.xml"/>
 
     with open(os.path.join(os.getcwd(), "EditREADME.md"), 'r') as load_f:
@@ -369,6 +373,33 @@ def create_json():
         json.dump(result, f, ensure_ascii=False, indent=4)
 
 
+def get_random_delivery_result():
+    """
+    随机生成从指定日期起的两周内的一天作为送货日期。
+    1-(13/14)^14=0.64566468978014111078154820859067
+    """
+    today = datetime.today()
+    # 获取当前周期的起始日期（两周为一个周期）
+    start_of_period = today - timedelta(days=today.weekday() % 14)
+    # 使用当前时间的时间戳作为随机数种子
+    random.seed(int(time.time()))
+    # 生成随机送货日期
+    delivery_date = start_of_period + timedelta(days=random.randint(0, 13))
+    end_data = start_of_period + timedelta(days=13)
+    result = "<h2>"
+    if delivery_date.strftime('%Y-%m-%d') == today.strftime('%Y-%m-%d'):
+        result += f"Random delivery date within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
+to {end_data.strftime('%Y-%m-%d')}): {delivery_date.strftime('%Y-%m-%d')}"
+        # 选择送的东西（花或水果）
+        items = ["flowers", "fruits"]
+        item_to_send = random.choice(items)
+        result += f"Item to send: {item_to_send.capitalize()}"
+    else:
+        result += f"Random delivery date within the 2-week period ({start_of_period.strftime('%Y-%m-%d')} \
+to {end_data.strftime('%Y-%m-%d')}): {delivery_date.strftime('%Y-%m-%d')}, not today {today.strftime('%Y-%m-%d')}"
+    result += "</h2>"
+    return result
+
 def main():
     # 提取订阅信息，放入garssInfo.json 中
     create_json()
@@ -384,11 +415,15 @@ def main():
     email_list = get_email_list()
     print("==邮件列表===", email_list[0])
 
+    # 随机生成送货日期
+    delivery_result = get_random_delivery_result()
+
     mail_re = r'邮件内容区开始>([.\S\s]*)<邮件内容区结束'
     reResult = re.findall(mail_re, readme_md[0])
+    result = list(delivery_result) + reResult
 
     try:
-        send_mail(email_list[0], "嘎!RSS订阅", reResult)
+        send_mail(email_list[0], "嘎!RSS订阅", result)
     except Exception as e:
         print("==邮件设置信息错误===》》", e)
 

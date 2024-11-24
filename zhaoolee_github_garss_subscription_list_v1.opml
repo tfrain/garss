@@ -4,10 +4,6 @@
 <title>嘎!RSS</title>
 </head>
 <body>
-      <outline text="不死鸟" title="不死鸟" type="rss"  
-            xmlUrl="https://iao.su/feed" htmlUrl="https://iao.su/feed"/>
-      <outline text="精品MAC应用分享" title="精品MAC应用分享" type="rss"  
-            xmlUrl="https://xclient.info/feed" htmlUrl="https://xclient.info/feed"/>
       <outline text="老殁" title="老殁" type="rss"  
             xmlUrl="https://www.mpyit.com/feed" htmlUrl="https://www.mpyit.com/feed"/>
       <outline text="鹏少资源网" title="鹏少资源网" type="rss"  
@@ -50,8 +46,6 @@
             xmlUrl="http://weiwuhui.com/feed" htmlUrl="http://weiwuhui.com/feed"/>
       <outline text="wenzi" title="wenzi" type="rss"  
             xmlUrl="https://www.xiabingbao.com/atom.xml" htmlUrl="https://www.xiabingbao.com/atom.xml"/>
-      <outline text="DIYgod" title="DIYgod" type="rss"  
-            xmlUrl="https://diygod.me/atom.xml" htmlUrl="https://diygod.me/atom.xml"/>
       <outline text="MacTalk-池建强的随想录" title="MacTalk-池建强的随想录" type="rss"  
             xmlUrl="http://macshuo.com/?feed=rss2" htmlUrl="http://macshuo.com/?feed=rss2"/>
       <outline text="ShrekShao" title="ShrekShao" type="rss"  
@@ -112,8 +106,6 @@
             xmlUrl="https://limboy.me/index.xml" htmlUrl="https://limboy.me/index.xml"/>
       <outline text="人人都是产品经理——iamsujie" title="人人都是产品经理——iamsujie" type="rss"  
             xmlUrl="http://iamsujie.com/feed/" htmlUrl="http://iamsujie.com/feed/"/>
-      <outline text="土木坛子" title="土木坛子" type="rss"  
-            xmlUrl="https://tumutanzi.com/feed" htmlUrl="https://tumutanzi.com/feed"/>
       <outline text="火丁笔记" title="火丁笔记" type="rss"  
             xmlUrl="https://blog.huoding.com/feed" htmlUrl="https://blog.huoding.com/feed"/>
       <outline text="產品經理 x 成長駭客 - Mr. PM下午先生" title="產品經理 x 成長駭客 - Mr. PM下午先生" type="rss"  
@@ -130,8 +122,6 @@
             xmlUrl="https://byvoid.com/zht/feed.xml" htmlUrl="https://byvoid.com/zht/feed.xml"/>
       <outline text="Est's Blog" title="Est's Blog" type="rss"  
             xmlUrl="https://blog.est.im/rss" htmlUrl="https://blog.est.im/rss"/>
-      <outline text="卢昌海个人主页" title="卢昌海个人主页" type="rss"  
-            xmlUrl="https://www.changhai.org//feed.xml" htmlUrl="https://www.changhai.org//feed.xml"/>
       <outline text="程序师" title="程序师" type="rss"  
             xmlUrl="https://www.techug.com/feed" htmlUrl="https://www.techug.com/feed"/>
       <outline text="bang's blog" title="bang's blog" type="rss"  
@@ -168,8 +158,6 @@
             xmlUrl="https://lepture.com/feed.xml" htmlUrl="https://lepture.com/feed.xml"/>
       <outline text="1 Byte" title="1 Byte" type="rss"  
             xmlUrl="https://1byte.io/rss.xml" htmlUrl="https://1byte.io/rss.xml"/>
-      <outline text="庭说" title="庭说" type="rss"  
-            xmlUrl="https://tingtalk.me/atom.xml" htmlUrl="https://tingtalk.me/atom.xml"/>
       <outline text="KAIX.IN" title="KAIX.IN" type="rss"  
             xmlUrl="https://kaix.in/feed/" htmlUrl="https://kaix.in/feed/"/>
       <outline text="硕鼠的博客站" title="硕鼠的博客站" type="rss"  
@@ -274,8 +262,6 @@
             xmlUrl="https://blog.imalan.cn/feed/index.xml" htmlUrl="https://blog.imalan.cn/feed/index.xml"/>
       <outline text="千古壹号的博客" title="千古壹号的博客" type="rss"  
             xmlUrl="https://qianguyihao.com/atom.xml" htmlUrl="https://qianguyihao.com/atom.xml"/>
-      <outline text="少数派" title="少数派" type="rss"  
-            xmlUrl="https://sspai.com/feed" htmlUrl="https://sspai.com/feed"/>
       <outline text="数字尾巴" title="数字尾巴" type="rss"  
             xmlUrl="https://www.dgtle.com/rss/dgtle.xml" htmlUrl="https://www.dgtle.com/rss/dgtle.xml"/>
       <outline text="Chiphell" title="Chiphell" type="rss"  
@@ -374,12 +360,12 @@
             xmlUrl="https://www.wpdaxue.com/feed" htmlUrl="https://www.wpdaxue.com/feed"/>
       <outline text="Linux中国" title="Linux中国" type="rss"  
             xmlUrl="https://linux.cn/rss.xml" htmlUrl="https://linux.cn/rss.xml"/>
+      <outline text="酷壳(左耳朵耗子)" title="酷壳(左耳朵耗子)" type="rss"  
+            xmlUrl="https://coolshell.cn/feed" htmlUrl="https://coolshell.cn/feed"/>
       <outline text="豆瓣" title="豆瓣" type="rss"  
             xmlUrl="https://www.douban.com/feed/review/movie" htmlUrl="https://www.douban.com/feed/review/movie"/>
       <outline text="豆瓣" title="豆瓣" type="rss"  
             xmlUrl="https://www.douban.com/feed/review/book" htmlUrl="https://www.douban.com/feed/review/book"/>
-      <outline text="豆瓣" title="豆瓣" type="rss"  
-            xmlUrl="https://www.douban.com/feed/review/music" htmlUrl="https://www.douban.com/feed/review/music"/>
       <outline text="开源中国" title="开源中国" type="rss"  
             xmlUrl="https://www.oschina.net/blog/rss" htmlUrl="https://www.oschina.net/blog/rss"/>
       <outline text="博客园" title="博客园" type="rss"  
@@ -416,6 +402,8 @@
             xmlUrl="https://rsshub.v2fy.com/nosetime/home" htmlUrl="https://rsshub.v2fy.com/nosetime/home"/>
       <outline text="恩山无线论坛" title="恩山无线论坛" type="rss"  
             xmlUrl="https://rsshub.v2fy.com/right/forum/31" htmlUrl="https://rsshub.v2fy.com/right/forum/31"/>
+      <outline text="xLog" title="xLog" type="rss"  
+            xmlUrl="https://xlog.app/feed/hottest?interval=1" htmlUrl="https://xlog.app/feed/hottest?interval=1"/>
       <outline text="VIP影院" title="VIP影院" type="rss"  
             xmlUrl="https://bukaivip.com/rss" htmlUrl="https://bukaivip.com/rss"/>
       <outline text="LimeTorrents" title="LimeTorrents" type="rss"  

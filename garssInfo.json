@@ -1,16 +1,6 @@
 {
     "garssInfo": [
         {
-            "description": "不死鸟:专注分享优质资源",
-            "title": "不死鸟",
-            "xmlUrl": "https://iao.su/feed"
-        },
-        {
-            "description": "精品MAC应用分享，每天分享大量mac软件，为您提供优质的mac软件,免费软件下载服务",
-            "title": "精品MAC应用分享",
-            "xmlUrl": "https://xclient.info/feed"
-        },
-        {
             "description": "免费推荐优秀软件",
             "title": "老殁",
             "xmlUrl": "https://www.mpyit.com/feed"
@@ -114,11 +104,6 @@
             "description": "蚊子在前端开发工作中的总结",
             "title": "wenzi",
             "xmlUrl": "https://www.xiabingbao.com/atom.xml"
-        },
-        {
-            "description": "人气网红,前端萌新,有猫,开源",
-            "title": "DIYgod",
-            "xmlUrl": "https://diygod.me/atom.xml"
         },
         {
             "description": "关注技术和人文",
@@ -271,11 +256,6 @@
             "xmlUrl": "http://iamsujie.com/feed/"
         },
         {
-            "description": "和光同尘，与时舒卷",
-            "title": "土木坛子",
-            "xmlUrl": "https://tumutanzi.com/feed"
-        },
-        {
             "description": "多研究些问题，少谈些主义。",
             "title": "火丁笔记",
             "xmlUrl": "https://blog.huoding.com/feed"
@@ -314,11 +294,6 @@
             "description": "This blog is rated  R, viewer discretion is advised",
             "title": "Est's Blog",
             "xmlUrl": "https://blog.est.im/rss"
-        },
-        {
-            "description": "Changhai Lu's Homepage",
-            "title": "卢昌海个人主页",
-            "xmlUrl": "https://www.changhai.org//feed.xml"
         },
         {
             "description": "程序员、编程语言、软件开发、编程技术",
@@ -409,11 +384,6 @@
             "description": "Articles about life, technology, and startups.",
             "title": "1 Byte",
             "xmlUrl": "https://1byte.io/rss.xml"
-        },
-        {
-            "description": "保持蓬勃的好奇心",
-            "title": "庭说",
-            "xmlUrl": "https://tingtalk.me/atom.xml"
         },
         {
             "description": "杂文、随笔、感悟、记录",
@@ -676,11 +646,6 @@
             "xmlUrl": "https://qianguyihao.com/atom.xml"
         },
         {
-            "description": "少数派致力于更好地运用数字产品或科学方法，帮助用户提升工作效率和生活品质",
-            "title": "少数派",
-            "xmlUrl": "https://sspai.com/feed"
-        },
-        {
             "description": "分享美好数字生活",
             "title": "数字尾巴",
             "xmlUrl": "https://www.dgtle.com/rss/dgtle.xml"
@@ -926,11 +891,6 @@
             "xmlUrl": "https://linux.cn/rss.xml"
         },
         {
-            "description": "创意工作者的社区",
-            "title": "V2EX",
-            "xmlUrl": "https://www.v2ex.com/index.xml"
-        },
-        {
             "description": "酷 壳RSS",
             "title": "酷壳(左耳朵耗子)",
             "xmlUrl": "https://coolshell.cn/feed"
@@ -944,11 +904,6 @@
             "description": "豆瓣最受欢迎的书评",
             "title": "豆瓣",
             "xmlUrl": "https://www.douban.com/feed/review/book"
-        },
-        {
-            "description": "豆瓣最受欢迎的乐评",
-            "title": "豆瓣",
-            "xmlUrl": "https://www.douban.com/feed/review/music"
         },
         {
             "description": "开源中国社区推荐文章",
@@ -1039,6 +994,11 @@
             "description": "无线路由器爱好者的乐园",
             "title": "恩山无线论坛",
             "xmlUrl": "https://rsshub.v2fy.com/right/forum/31"
+        },
+        {
+            "description": "An open-source creative community written on the blockchain.",
+            "title": "xLog",
+            "xmlUrl": "https://xlog.app/feed/hottest?interval=1"
         },
         {
             "description": "666影院 - 全网VIP电影免费看！",

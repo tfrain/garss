@@ -28,8 +28,6 @@
 | 编号 | 名称 | 描述 | RSS  |  最新内容 |
 | --- | --- | --- | --- |  --- |
 | <h2 id="软件工具">软件工具</h2> |  |   |  |
-| <div id="S001" style="text-align: center;"><img src="./_media/favicon/S001.png" width="30px" style="width:30px;height: auto;"/><br><span>S001</span></div> |  不死鸟 | 不死鸟:专注分享优质资源 | {{latest_content}} |  [订阅地址](https://iao.su/feed) | 
-| <div id="S002" style="text-align: center;"><img src="./_media/favicon/S002.png" width="30px" style="width:30px;height: auto;"/><br><span>S002</span></div> | 精品MAC应用分享 | 精品MAC应用分享，每天分享大量mac软件，为您提供优质的mac软件,免费软件下载服务 |  {{latest_content}} | [订阅地址](https://xclient.info/feed) | 
 | <div id="S003" style="text-align: center;"><img src="./_media/favicon/S003.png" width="30px" style="width:30px;height: auto;"/><br><span>S003</span></div> | 老殁 | 免费推荐优秀软件 |  {{latest_content}} | [订阅地址](https://www.mpyit.com/feed) |
 | <div id="S004" style="text-align: center;"><img src="./_media/favicon/S004.png" width="30px" style="width:30px;height: auto;"/><br><span>S004</span></div> | 鹏少资源网 | 专注于精品软件收录分享 |   {{latest_content}} | [订阅地址](https://www.jokerps.com/feed) |
 | <div id="S005" style="text-align: center;"><img src="./_media/favicon/S005.png" width="30px" style="width:30px;height: auto;"/><br><span>S005</span></div> | 小众软件 | 分享免费、小巧、实用、有趣、绿色的软件 | {{latest_content}} | [订阅地址](https://www.appinn.com/feed/) | 
@@ -52,7 +50,6 @@
 | <div id="B013" style="text-align: center;"><img src="./_media/favicon/B013.png" width="30px" style="width:30px;height: auto;"/><br><span>B013</span></div> | 透明创业实验 | timqian的博客  | {{latest_content}} | [订阅地址](https://blog.t9t.io/atom.xml) |
 | <div id="B014" style="text-align: center;"><img src="./_media/favicon/B014.png" width="30px" style="width:30px;height: auto;"/><br><span>B014</span></div> | 扯氮集 | 多歧为贵 不取苟同 | {{latest_content}} | [订阅地址](http://weiwuhui.com/feed) |
 | <div id="B015" style="text-align: center;"><img src="./_media/favicon/B015.png" width="30px" style="width:30px;height: auto;"/><br><span>B015</span></div> | wenzi | 蚊子在前端开发工作中的总结  | {{latest_content}} | [订阅地址](https://www.xiabingbao.com/atom.xml) |
-| <div id="B016" style="text-align: center;"><img src="./_media/favicon/B016.png" width="30px" style="width:30px;height: auto;"/><br><span>B016</span></div> | DIYgod | 人气网红,前端萌新,有猫,开源  | {{latest_content}}  |  [订阅地址](https://diygod.me/atom.xml) | 
 | <div id="B017" style="text-align: center;"><img src="./_media/favicon/B017.png" width="30px" style="width:30px;height: auto;"/><br><span>B017</span></div> | MacTalk-池建强的随想录 | 关注技术和人文 | {{latest_content}}  |  [订阅地址](http://macshuo.com/?feed=rss2) | 
 | <div id="B018" style="text-align: center;"><img src="./_media/favicon/B018.png" width="30px" style="width:30px;height: auto;"/><br><span>B018</span></div> | ShrekShao | ShrekShao's Blog | {{latest_content}}  |  [订阅地址](http://shrekshao.github.io/feed.xml) | 
 | <div id="B019" style="text-align: center;"><img src="./_media/favicon/B019.png" width="30px" style="width:30px;height: auto;"/><br><span>B019</span></div> | Phodal | Phodal - A Growth Engineer | {{latest_content}}  |  [订阅地址](https://www.phodal.com/blog/feeds/rss/) |
@@ -83,7 +80,6 @@
 | <div id="B044" style="text-align: center;"><img src="./_media/favicon/B044.png" width="30px" style="width:30px;height: auto;"/><br><span>B044</span></div> | 木遥 | 木遥的窗子 | {{latest_content}}  |  [订阅地址](http://blog.farmostwood.net/feed) | 
 | <div id="B045" style="text-align: center;"><img src="./_media/favicon/B045.png" width="30px" style="width:30px;height: auto;"/><br><span>B045</span></div> | Limboy's HQ | Limboy's HQ | {{latest_content}}  |  [订阅地址](https://limboy.me/index.xml) | 
 | <div id="B046" style="text-align: center;"><img src="./_media/favicon/B046.png" width="30px" style="width:30px;height: auto;"/><br><span>B046</span></div> | 人人都是产品经理——iamsujie | 成长中的产品经理，期待和同学们一起，用好产品改变世界~ | {{latest_content}}  |  [订阅地址](http://iamsujie.com/feed/) | 
-| <div id="B047" style="text-align: center;"><img src="./_media/favicon/B047.png" width="30px" style="width:30px;height: auto;"/><br><span>B047</span></div> | 土木坛子 | 和光同尘，与时舒卷 | {{latest_content}}  |  [订阅地址](https://tumutanzi.com/feed) | 
 | <div id="B048" style="text-align: center;"><img src="./_media/favicon/B048.png" width="30px" style="width:30px;height: auto;"/><br><span>B048</span></div> | 火丁笔记 | 多研究些问题，少谈些主义。 | {{latest_content}}  |  [订阅地址](https://blog.huoding.com/feed) | 
 | B049 | 產品經理 x 成長駭客 - Mr. PM下午先生 | PM可以是產品經理、下午、Pig Man，但絕對不是Poor Man | {{latest_content}}  |  [订阅地址](http://mrpm.cc/?feed=rss2) | 
 | B050 | Matrix67 | Matrix67: The Aha Moments  | {{latest_content}}  |  [订阅地址](http://www.matrix67.com/blog/feed) | 
@@ -92,7 +88,6 @@
 | <div id="B053" style="text-align: center;"><img src="./_media/favicon/B053.png" width="30px" style="width:30px;height: auto;"/><br><span>B053</span></div> | 搞笑談軟工 | 敏捷開發，設計模式，精實開發，Scrum，軟體設計，軟體架構  | {{latest_content}}  |  [订阅地址](http://teddy-chen-tw.blogspot.com/feeds/posts/default) | 
 | <div id="B054" style="text-align: center;"><img src="./_media/favicon/B054.png" width="30px" style="width:30px;height: auto;"/><br><span>B054</span></div> | Beyond the Void | 遊記、語言學、經濟學、信息學競賽/ACM經驗、算法講解、技術知識  | {{latest_content}}  |  [订阅地址](https://byvoid.com/zht/feed.xml) | 
 | B055 | Est's Blog | This blog is rated  R, viewer discretion is advised  | {{latest_content}}  |  [订阅地址](https://blog.est.im/rss) | 
-| <div id="B056" style="text-align: center;"><img src="./_media/favicon/B056.png" width="30px" style="width:30px;height: auto;"/><br><span>B056</span></div> | 卢昌海个人主页 | Changhai Lu's Homepage  | {{latest_content}}  |  [订阅地址](https://www.changhai.org//feed.xml) | 
 | <div id="B057" style="text-align: center;"><img src="./_media/favicon/B057.png" width="30px" style="width:30px;height: auto;"/><br><span>B057</span></div> | 程序师 | 程序员、编程语言、软件开发、编程技术 | {{latest_content}}  |  [订阅地址](https://www.techug.com/feed) | 
 | B058 | bang's blog | 我的世界 | {{latest_content}}  |  [订阅地址](http://blog.cnbang.net/feed/) | 
 | B059 | 白宦成 | 思无邪 | {{latest_content}}  |  [订阅地址](https://www.ixiqin.com/feed/) | 
@@ -111,7 +106,6 @@
 | <div id="B072" style="text-align: center;"><img src="./_media/favicon/B072.png" width="30px" style="width:30px;height: auto;"/><br><span>B072</span></div> | 数字移民 | 数字移民是一种生活方式 | {{latest_content}}  |  [订阅地址](https://blog.shuziyimin.org/feed) | 
 | <div id="B073" style="text-align: center;"><img src="./_media/favicon/B073.png" width="30px" style="width:30px;height: auto;"/><br><span>B073</span></div> | Just lepture | Love its people, but never trust its government. | {{latest_content}}  |  [订阅地址](https://lepture.com/feed.xml) | 
 | B074 | 1 Byte | Articles about life, technology, and startups. | {{latest_content}}  |  [订阅地址](https://1byte.io/rss.xml) | 
-| <div id="B075" style="text-align: center;"><img src="./_media/favicon/B075.png" width="30px" style="width:30px;height: auto;"/><br><span>B075</span></div> | 庭说 | 保持蓬勃的好奇心 | {{latest_content}}  |  [订阅地址](https://tingtalk.me/atom.xml) | 
 | <div id="B076" style="text-align: center;"><img src="./_media/favicon/B076.png" width="30px" style="width:30px;height: auto;"/><br><span>B076</span></div> | KAIX.IN | 杂文、随笔、感悟、记录 | {{latest_content}}  |  [订阅地址](https://kaix.in/feed/) | 
 | <div id="B077" style="text-align: center;"><img src="./_media/favicon/B077.png" width="30px" style="width:30px;height: auto;"/><br><span>B077</span></div> | 硕鼠的博客站 | 范路的博客主站，时而会发些东西。 | {{latest_content}}  |  [订阅地址](http://lukefan.com/?feed=rss2) | 
 | <div id="B078" style="text-align: center;"><img src="./_media/favicon/B078.png" width="30px" style="width:30px;height: auto;"/><br><span>B078</span></div> | 构建我的被动收入 | Lifelong Learner | {{latest_content}}  |  [订阅地址](https://www.bmpi.dev/index.xml) | 
@@ -165,7 +159,6 @@
 | <div id="B126" style="text-align: center;"><span>B126</span></div> |  失眠海峡 |   我要与你坦诚相见   | {{latest_content}} | [订阅地址](https://blog.imalan.cn/feed/index.xml) |
 | <div id="B127" style="text-align: center;"><span>B127</span></div> |  千古壹号的博客 |   一个京东前端工程师   | {{latest_content}} | [订阅地址](https://qianguyihao.com/atom.xml) |
 | <h2 id="数码">数码</h2> |  |   |  |
-| D001 | 少数派 | 少数派致力于更好地运用数字产品或科学方法，帮助用户提升工作效率和生活品质 | {{latest_content}}  |  [订阅地址](https://sspai.com/feed) | 
 | D002 | 数字尾巴 | 分享美好数字生活 | {{latest_content}}  |  [订阅地址](https://www.dgtle.com/rss/dgtle.xml) | 
 | D003 | Chiphell  | 分享与交流用户体验 | {{latest_content}}  |  [订阅地址](https://www.chiphell.com/portal.php?mod=rss)  | 
 | <h2 id="IT团队博客">IT团队博客</h2> |  |   |  |
@@ -228,7 +221,6 @@
 | C012 | 酷壳(左耳朵耗子) | 酷 壳RSS | {{latest_content}}  |  [订阅地址](https://coolshell.cn/feed) |  
 | C013 | 豆瓣 | 豆瓣最受欢迎的影评 | {{latest_content}}  |  [订阅地址](https://www.douban.com/feed/review/movie) |  
 | C014 | 豆瓣 | 豆瓣最受欢迎的书评 | {{latest_content}}  |  [订阅地址](https://www.douban.com/feed/review/book) |  
-| C015 | 豆瓣 | 豆瓣最受欢迎的乐评 | {{latest_content}}  |  [订阅地址](https://www.douban.com/feed/review/music) |  
 | C016 | 开源中国 | 开源中国社区推荐文章 | {{latest_content}}  |  [订阅地址](https://www.oschina.net/blog/rss) |  
 | C017 | 博客园 | 博客园精华区 | {{latest_content}}  |  [订阅地址](http://feed.cnblogs.com/blog/picked/rss) |  
 | C018 | 博客园 | 博客园首页 | {{latest_content}}  |  [订阅地址](http://feed.cnblogs.com/blog/sitehome/rss) |  
