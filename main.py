@@ -380,7 +380,12 @@ def get_random_delivery_result():
     """
     today = datetime.today()
     # 获取当前周期的起始日期（两周为一个周期）
-    start_of_period = today - timedelta(days=today.weekday() % 14)
+    # 选择一个固定的起始点，比如2024年1月1日
+    fixed_start_date = datetime(2024, 1, 1)
+    # 计算从固定起始点到今天经过了多少天
+    days_since_start = (today - fixed_start_date).days
+    # 确定当前周期的起始日期
+    start_of_period = fixed_start_date + timedelta(days=(days_since_start // 14) * 14)
     # 使用当前时间的时间戳作为随机数种子
     random.seed(int(time.time()))
     # 生成随机送货日期
