@@ -42,8 +42,11 @@ def get_rss_info(feed_url, index, rss_info_list):
                 for entrie in feed_entries[0: feed_entries_length - 1]:
                     title = entrie["title"]
                     link = entrie["link"]
-                    date = time.strftime(
-                        "%Y-%m-%d", entrie["published_parsed"])
+                    parsed_time = entrie.get(
+                        "published_parsed") or entrie.get("updated_parsed")
+                    if not parsed_time:
+                        continue
+                    date = time.strftime("%Y-%m-%d", parsed_time)
 
                     title = title.replace("\n", "")
                     title = title.replace("\r", "")
